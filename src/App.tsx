@@ -23,8 +23,12 @@ export default function App() {
   const [targetAppName, setTargetAppName] = useState<string>('');
   const [copilotInitialPrompt, setCopilotInitialPrompt] = useState<string>('');
 
-  // Sync with initial URL hash if present
+  // Sync with initial URL hash if present & ensure page starts at top
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     const handleHash = () => {
       const hash = window.location.hash.toLowerCase();
       if (hash.includes('reach-today')) {
@@ -37,6 +41,13 @@ export default function App() {
     };
 
     handleHash();
+
+    // Scroll to top on initial page load if no explicit section anchor is requested
+    const initialHash = window.location.hash.toLowerCase();
+    if (!initialHash || initialHash === '#qua' || initialHash === '#') {
+      window.scrollTo(0, 0);
+    }
+
     window.addEventListener('hashchange', handleHash);
     return () => window.removeEventListener('hashchange', handleHash);
   }, []);

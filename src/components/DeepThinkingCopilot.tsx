@@ -49,13 +49,24 @@ Click one of the common questions below or type your question directly.`,
   const [loading, setLoading] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const chatScrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const isFirstRender = useRef(true);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBottom = (smooth = true) => {
+    if (chatScrollContainerRef.current) {
+      chatScrollContainerRef.current.scrollTo({
+        top: chatScrollContainerRef.current.scrollHeight,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+    }
   };
 
   useEffect(() => {
+    // Do not scroll on initial mount to keep the window at the top of the page
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     scrollToBottom();
   }, [messages, loading]);
 
@@ -254,7 +265,7 @@ Click one of the common questions below or type your question directly.`,
           </div>
 
           {/* Messages Stream */}
-          <div className="flex-1 overflow-y-auto p-5 space-y-5">
+          <div ref={chatScrollContainerRef} className="flex-1 overflow-y-auto p-5 space-y-5">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -318,8 +329,6 @@ Click one of the common questions below or type your question directly.`,
                 </div>
               </div>
             )}
-
-            <div ref={messagesEndRef} />
           </div>
 
           {/* Input Box */}

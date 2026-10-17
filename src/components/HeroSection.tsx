@@ -28,11 +28,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onViewRegistry,
 }) => {
   return (
-    <section className="relative pt-28 pb-20 md:pt-36 md:pb-24 border-b border-slate-800/80 overflow-hidden">
+    <section className="relative pt-16 pb-16 sm:pt-20 sm:pb-20 md:pt-24 md:pb-24 border-b border-slate-800/80 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Top Corporate Identity & Registry Verification Row */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-slate-400 mb-8 font-sans">
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-slate-400 mb-5 sm:mb-6 font-sans">
           <span className="font-semibold text-slate-200">
             {lang === 'ja' ? 'Qua合同会社 (Qua LLC)' : 'Qua LLC (Official Corporate Site)'}
           </span>
@@ -52,35 +52,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Main Hero Content */}
         <div className="text-center max-w-4xl mx-auto">
-          {/* Official 3D Orbital "Qua" Logo (Vertical Lockup Matching Uploaded Design) */}
-          <div className="flex justify-center mb-8">
-            <div className="px-10 py-6 rounded-3xl bg-[#0b1120]/90 border border-slate-800/90 shadow-2xl">
-              <QuaLogo size="hero" showText={true} layout="vertical" />
+          {/* Official 3D Orbital "Qua" Logo */}
+          <div className="flex justify-center mb-4 sm:mb-5">
+            <div className="px-6 py-3 sm:px-8 sm:py-4 rounded-2xl bg-[#0b1120]/90 border border-slate-800/90 shadow-xl inline-flex items-center justify-center">
+              <div className="sm:hidden">
+                <QuaLogo size="md" showText={true} layout="vertical" />
+              </div>
+              <div className="hidden sm:block">
+                <QuaLogo size="lg" showText={true} layout="vertical" />
+              </div>
             </div>
           </div>
 
           {/* English Vision Sub-kicker */}
-          <p className="text-xs sm:text-sm font-mono-tech tracking-widest text-sky-400 mb-3">
+          <p className="text-xs sm:text-sm font-mono-tech tracking-widest text-sky-400 mb-2 sm:mb-3 text-center">
             Creating the Future of the Frontier.
           </p>
 
-          {/* Main Display Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6 leading-[1.25] sm:leading-[1.18]">
+          {/* Main Display Headline (Centered horizontally & vertically in first view) */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6 leading-[1.25] sm:leading-[1.18] text-center mx-auto">
             {lang === 'ja' ? (
               <>
-                {/* Mobile: 3 lines */}
-                <span className="sm:hidden block">
+                {/* Mobile: 3 lines, centered */}
+                <span className="sm:hidden block text-center mx-auto">
                   次世代の<br />
                   アプリケーションを<br />
                   創り出す。
                 </span>
-                {/* Tablet & Desktop: single line guaranteed */}
-                <span className="hidden sm:inline-block whitespace-nowrap">
+                {/* Tablet & Desktop: single line guaranteed, centered */}
+                <span className="hidden sm:inline-block whitespace-nowrap text-center mx-auto">
                   次世代のアプリケーションを創り出す。
                 </span>
               </>
             ) : (
-              <span className="inline-block sm:whitespace-nowrap">
+              <span className="inline-block sm:whitespace-nowrap text-center mx-auto">
                 Creating Next-Generation Applications.
               </span>
             )}

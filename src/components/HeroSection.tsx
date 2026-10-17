@@ -64,8 +64,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          {/* Main Headline & Vision Lockup - subtly offset for Japanese balance, strictly centered for English */}
-          <div className={lang === 'ja' ? "relative -translate-x-2 sm:-translate-x-5 md:-translate-x-8" : "relative mx-auto text-center"}>
+          {/* Main Headline & Vision Lockup - properly centered with balanced optical alignment */}
+          <div className={lang === 'ja' ? "relative -translate-x-0.5 sm:-translate-x-1" : "relative mx-auto text-center"}>
             {/* English Vision Sub-kicker */}
             <p className="text-xs sm:text-sm font-mono-tech tracking-widest text-sky-400 mb-2 sm:mb-3 text-center">
               Creating the Future of the Frontier.
@@ -79,13 +79,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             }`}>
               {lang === 'ja' ? (
                 <>
-                  {/* Mobile: 3 lines, left-aligned with each other for clean left margin */}
-                  <span className="sm:hidden inline-block text-left">
+                  {/* Mobile: 3 lines, centered and well-balanced */}
+                  <span className="sm:hidden inline-block text-center">
                     次世代の<br />
                     アプリケーションを<br />
                     創り出す。
                   </span>
-                  {/* Tablet & Desktop: single line guaranteed, shifted slightly left */}
+                  {/* Tablet & Desktop: single line guaranteed, properly centered */}
                   <span className="hidden sm:inline-block whitespace-nowrap text-center">
                     次世代のアプリケーションを創り出す。
                   </span>

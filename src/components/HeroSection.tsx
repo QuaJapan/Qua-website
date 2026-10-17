@@ -64,35 +64,51 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          {/* English Vision Sub-kicker */}
-          <p className="text-xs sm:text-sm font-mono-tech tracking-widest text-sky-400 mb-2 sm:mb-3 text-center">
-            Creating the Future of the Frontier.
-          </p>
+          {/* Main Headline & Vision Lockup - subtly offset for Japanese balance, strictly centered for English */}
+          <div className={lang === 'ja' ? "relative -translate-x-2 sm:-translate-x-5 md:-translate-x-8" : "relative mx-auto text-center"}>
+            {/* English Vision Sub-kicker */}
+            <p className="text-xs sm:text-sm font-mono-tech tracking-widest text-sky-400 mb-2 sm:mb-3 text-center">
+              Creating the Future of the Frontier.
+            </p>
 
-          {/* Main Display Headline (Centered horizontally & vertically in first view) */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6 leading-[1.25] sm:leading-[1.18] text-center mx-auto">
-            {lang === 'ja' ? (
-              <>
-                {/* Mobile: 3 lines, centered */}
-                <span className="sm:hidden block text-center mx-auto">
-                  次世代の<br />
-                  アプリケーションを<br />
-                  創り出す。
+            {/* Main Display Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6 leading-[1.25] sm:leading-[1.18] text-center mx-auto">
+              {lang === 'ja' ? (
+                <>
+                  {/* Mobile: 3 lines, left-aligned with each other for clean left margin */}
+                  <span className="sm:hidden inline-block text-left">
+                    次世代の<br />
+                    アプリケーションを<br />
+                    創り出す。
+                  </span>
+                  {/* Tablet & Desktop: single line guaranteed, shifted slightly left */}
+                  <span className="hidden sm:inline-block whitespace-nowrap text-center">
+                    次世代のアプリケーションを創り出す。
+                  </span>
+                </>
+              ) : (
+                <span className="block text-center mx-auto">
+                  {/* Mobile (<640px): 2 clean balanced lines, fully visible and centered */}
+                  <span className="sm:hidden inline-block text-center">
+                    Creating Next-Generation<br />
+                    Applications.
+                  </span>
+                  {/* Tablet (sm & md, 640px-1023px): 2 balanced lines so it never overflows tablet width */}
+                  <span className="hidden sm:inline-block lg:hidden text-center">
+                    Creating Next-Generation<br />
+                    Applications.
+                  </span>
+                  {/* Desktop (lg & up, 1024px+): single elegant continuous line, perfectly centered */}
+                  <span className="hidden lg:inline-block whitespace-nowrap text-center">
+                    Creating Next-Generation Applications.
+                  </span>
                 </span>
-                {/* Tablet & Desktop: single line guaranteed, centered */}
-                <span className="hidden sm:inline-block whitespace-nowrap text-center mx-auto">
-                  次世代のアプリケーションを創り出す。
-                </span>
-              </>
-            ) : (
-              <span className="inline-block sm:whitespace-nowrap text-center mx-auto">
-                Creating Next-Generation Applications.
-              </span>
-            )}
-          </h1>
+              )}
+            </h1>
+          </div>
 
           {/* Clear, Grounded Corporate Description */}
-          <p className="text-sm sm:text-lg text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-sans">
+          <p className="text-sm sm:text-lg text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-sans text-center">
             {lang === 'ja' ? (
               <>
                 <strong className="text-white font-semibold">Qua合同会社（Qua LLC）</strong>は、現在開発中の革命的英単語・語学単語学習アプリ『<strong className="text-sky-300">EitangoNihongo</strong>』（近々公開予定）や次世代SNS『<strong className="text-slate-200">Paralmeet</strong>』（Upcoming / Developing）をはじめとする自社アプリケーションの企画・開発、および法人・事業者様向けのソフトウェア受託開発を行うテクノロジー企業です。
@@ -123,7 +139,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Strategic Flagship Teaser Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-300 mb-12 shadow-inner">
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-300 mb-12 shadow-inner max-w-full text-center">
             <span className="font-semibold text-sky-400">FOCUS VENTURES:</span>
             <span>{lang === 'ja' ? '『Reach Today（主権者教育）』＆『Reanow（模擬世界MMO-SNS）』極秘開発推進中' : 'Developing Reach Today (Youth Civics) & Reanow (MMO Geopolitics)'}</span>
           </div>
@@ -150,7 +166,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400">
               <span className="inline-flex items-center gap-1.5 text-amber-300 font-medium">
                 <BookOpenCheck className="w-3.5 h-3.5 text-amber-400" />
-                EitangoNihongo (近々公開)
+                {lang === 'ja' ? 'EitangoNihongo (近々公開)' : 'EitangoNihongo (Launching Soon)'}
               </span>
               <span>·</span>
               <span className="inline-flex items-center gap-1.5 text-slate-300">

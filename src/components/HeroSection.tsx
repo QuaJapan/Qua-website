@@ -51,7 +51,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* Main Hero Content */}
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4">
           {/* Official 3D Orbital "Qua" Logo */}
           <div className="flex justify-center mb-4 sm:mb-5">
             <div className="px-6 py-3 sm:px-8 sm:py-4 rounded-2xl bg-[#0b1120]/90 border border-slate-800/90 shadow-xl inline-flex items-center justify-center">
@@ -71,8 +71,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               Creating the Future of the Frontier.
             </p>
 
-            {/* Main Display Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6 leading-[1.25] sm:leading-[1.18] text-center mx-auto">
+            {/* Main Display Headline (Tailored font scaling for Japanese vs English) */}
+            <h1 className={`font-display font-bold tracking-tight text-white mb-6 text-center mx-auto ${
+              lang === 'ja'
+                ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.25] sm:leading-[1.18]'
+                : 'text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-[44px] leading-[1.2]'
+            }`}>
               {lang === 'ja' ? (
                 <>
                   {/* Mobile: 3 lines, left-aligned with each other for clean left margin */}
@@ -87,18 +91,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </span>
                 </>
               ) : (
-                <span className="block text-center mx-auto">
-                  {/* Mobile (<640px): 2 clean balanced lines, fully visible and centered */}
-                  <span className="sm:hidden inline-block text-center">
+                <span className="block text-center mx-auto max-w-full">
+                  {/* Mobile & Tablet (<1024px): 2 clean balanced lines, fully visible and centered */}
+                  <span className="lg:hidden inline-block text-center px-2">
                     Creating Next-Generation<br />
                     Applications.
                   </span>
-                  {/* Tablet (sm & md, 640px-1023px): 2 balanced lines so it never overflows tablet width */}
-                  <span className="hidden sm:inline-block lg:hidden text-center">
-                    Creating Next-Generation<br />
-                    Applications.
-                  </span>
-                  {/* Desktop (lg & up, 1024px+): single elegant continuous line, perfectly centered */}
+                  {/* Desktop (lg & up, 1024px+): single line properly scaled to fit inside container, 100% visible and centered */}
                   <span className="hidden lg:inline-block whitespace-nowrap text-center">
                     Creating Next-Generation Applications.
                   </span>

@@ -32,12 +32,12 @@ export const DeepThinkingCopilot: React.FC<DeepThinkingCopilotProps> = ({
       content: lang === 'ja'
         ? `こんにちは。Qua合同会社（Qua LLC）の公式 Q&A AIボットです。
 
-当社の革命的英単語・語学単語学習アプリ『EitangoNihongo』、開発中の次世代SNS『Paralmeet』（Upcoming / Developing）、受託アプリ開発のご相談、会社概要などについて自動でお答えします。
+当社の現在開発中の革命的英単語・語学単語学習アプリ『EitangoNihongo』（近々公開予定）、開発中の次世代SNS『Paralmeet』（Upcoming / Developing）、受託アプリ開発のご相談、会社概要などについて自動でお答えします。
 
 下の質問ボタンをクリックするか、メッセージ入力欄からお気軽にご質問ください。`
         : `Hello! This is the official Q&A AI Bot for Qua LLC.
 
-I can answer questions regarding our revolutionary English & language vocabulary learning app (EitangoNihongo), our upcoming next-gen SNS (Paralmeet), custom software inquiries, and corporate profile.
+I can answer questions regarding our upcoming revolutionary vocabulary learning app (EitangoNihongo - Launching Soon), our upcoming next-gen SNS (Paralmeet), custom software inquiries, and corporate profile.
 
 Click one of the common questions below or type your question directly.`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -79,12 +79,12 @@ Click one of the common questions below or type your question directly.`,
   const presetQueries = [
     {
       icon: BookOpenCheck,
-      categoryJa: '主力公開アプリ',
-      categoryEn: 'Flagship App',
+      categoryJa: '開発中アプリ（近々公開）',
+      categoryEn: 'Coming Soon App',
       labelJa: 'EitangoNihongo（語学単語学習）とは？',
       labelEn: 'About EitangoNihongo',
-      promptJa: '革命的英単語・語学単語学習アプリ「EitangoNihongo」の特徴や、開発中の次世代SNS「Paralmeet」について教えてください。',
-      promptEn: 'Tell me about EitangoNihongo (Revolutionary Vocabulary Learning App) and the upcoming Next-Gen SNS Paralmeet.'
+      promptJa: '現在開発中・近々公開予定の英単語・語学単語学習アプリ「EitangoNihongo」の特徴や、次世代SNS「Paralmeet」について教えてください。',
+      promptEn: 'Tell me about EitangoNihongo (Revolutionary Vocabulary Learning App, Launching Soon) and the upcoming Next-Gen SNS Paralmeet.'
     },
     {
       icon: Code2,
@@ -204,8 +204,8 @@ Click one of the common questions below or type your question directly.`,
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm mt-2.5 leading-relaxed font-sans">
             {lang === 'ja'
-              ? '当社のアプリケーション開発事業、革命的英単語・語学単語学習アプリ『EitangoNihongo』、開発中の次世代SNS『Paralmeet』、および会社情報について、AIボットがQ&A形式でわかりやすくお答えします。'
-              : 'An automated Q&A AI bot that answers questions about our application development services, EitangoNihongo, Paralmeet, and company information.'}
+              ? '当社のアプリケーション開発事業、現在開発中の革命的英単語・語学単語学習アプリ『EitangoNihongo』（近々公開予定）、開発中の次世代SNS『Paralmeet』、および会社情報について、AIボットがQ&A形式でわかりやすくお答えします。'
+              : 'An automated Q&A AI bot that answers questions about our application development services, upcoming app EitangoNihongo (Launching Soon), Paralmeet, and company information.'}
           </p>
         </div>
 

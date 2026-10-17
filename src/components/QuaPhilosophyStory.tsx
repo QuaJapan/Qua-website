@@ -19,12 +19,12 @@ export const QuaPhilosophyStory: React.FC<QuaPhilosophyStoryProps> = ({ lang, on
   const evolutionPhases = [
     {
       phase: "Phase 01",
-      statusJa: "現在運営・継続開発中",
-      statusEn: "Active Flagship",
-      titleJa: "革命的英単語・語学単語学習アプリの提供",
-      titleEn: "Revolutionary Vocabulary Learning App",
-      descJa: "文脈・ニュアンス・語源・最適反復を統合した革命的英単語・語学単語学習アプリ『EitangoNihongo』の開発・運営。",
-      descEn: "Operating EitangoNihongo, our revolutionary English and language vocabulary learning application.",
+      statusJa: "現在開発中・近々公開予定",
+      statusEn: "In Development / Launching Soon",
+      titleJa: "革命的英単語・語学単語学習アプリの開発",
+      titleEn: "Revolutionary Vocabulary Learning App (Coming Soon)",
+      descJa: "文脈・ニュアンス・語源・最適反復を統合した革命的英単語・語学単語学習アプリ『EitangoNihongo』の開発（近々公開予定）。",
+      descEn: "Developing EitangoNihongo, our upcoming revolutionary English and language vocabulary learning application.",
       icon: BookOpenCheck,
     },
     {

@@ -65,11 +65,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </p>
 
           {/* Main Display Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6 leading-[1.18] [text-wrap:balance]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6 leading-[1.25] sm:leading-[1.18]">
             {lang === 'ja' ? (
-              <>次世代のアプリケーションを創り出す。</>
+              <>
+                {/* Mobile: 3 lines */}
+                <span className="sm:hidden block">
+                  次世代の<br />
+                  アプリケーションを<br />
+                  創り出す。
+                </span>
+                {/* Tablet & Desktop: single line guaranteed */}
+                <span className="hidden sm:inline-block whitespace-nowrap">
+                  次世代のアプリケーションを創り出す。
+                </span>
+              </>
             ) : (
-              <>Creating Next-Generation Applications.</>
+              <span className="inline-block sm:whitespace-nowrap">
+                Creating Next-Generation Applications.
+              </span>
             )}
           </h1>
 
@@ -77,11 +90,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <p className="text-sm sm:text-lg text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-sans">
             {lang === 'ja' ? (
               <>
-                <strong className="text-white font-semibold">Qua合同会社（Qua LLC）</strong>は、革命的英単語・語学単語学習アプリ『<strong className="text-sky-300">EitangoNihongo</strong>』や現在開発中の次世代SNS『<strong className="text-slate-200">Paralmeet</strong>』（Upcoming / Developing）をはじめとする自社アプリケーションの企画・開発、および法人・事業者様向けのソフトウェア受託開発を行うテクノロジー企業です。
+                <strong className="text-white font-semibold">Qua合同会社（Qua LLC）</strong>は、現在開発中の革命的英単語・語学単語学習アプリ『<strong className="text-sky-300">EitangoNihongo</strong>』（近々公開予定）や次世代SNS『<strong className="text-slate-200">Paralmeet</strong>』（Upcoming / Developing）をはじめとする自社アプリケーションの企画・開発、および法人・事業者様向けのソフトウェア受託開発を行うテクノロジー企業です。
               </>
             ) : (
               <>
-                <strong className="text-white font-semibold">Qua LLC</strong> is a software development company building innovative applications—led by <strong className="text-sky-300">EitangoNihongo</strong>, our revolutionary English and language vocabulary learning app, and <strong className="text-slate-200">Paralmeet</strong>, our upcoming next-gen social network (Upcoming / Developing)—alongside custom software engineering for corporate clients.
+                <strong className="text-white font-semibold">Qua LLC</strong> is a software development company building innovative applications—led by our upcoming revolutionary vocabulary app <strong className="text-sky-300">EitangoNihongo</strong> (In Development / Launching Soon) and <strong className="text-slate-200">Paralmeet</strong>, our next-gen social network—alongside custom software engineering for corporate clients.
               </>
             )}
           </p>
@@ -125,14 +138,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </h2>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                 {lang === 'ja'
-                  ? '革命的英単語・語学単語学習アプリ「EitangoNihongo」の運営・提供と、次世代SNS「Paralmeet」（Upcoming / Developing）をはじめとする自社プロダクトの開発を推進しています。'
-                  : 'Operating our revolutionary vocabulary & language learning app EitangoNihongo, while developing our upcoming next-gen social network Paralmeet.'}
+                  ? '革命的英単語・語学単語学習アプリ「EitangoNihongo」（現在開発中・近々公開予定）や、次世代SNS「Paralmeet」（Upcoming / Developing）をはじめとする自社プロダクトの開発を推進しています。'
+                  : 'Developing our upcoming revolutionary vocabulary & language learning app EitangoNihongo (Launching Soon), while building our next-gen social network Paralmeet.'}
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400">
-              <span className="inline-flex items-center gap-1.5 text-sky-300 font-medium">
-                <BookOpenCheck className="w-3.5 h-3.5 text-sky-400" />
-                EitangoNihongo
+              <span className="inline-flex items-center gap-1.5 text-amber-300 font-medium">
+                <BookOpenCheck className="w-3.5 h-3.5 text-amber-400" />
+                EitangoNihongo (近々公開)
               </span>
               <span>·</span>
               <span className="inline-flex items-center gap-1.5 text-slate-300">

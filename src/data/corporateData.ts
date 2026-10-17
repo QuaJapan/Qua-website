@@ -104,8 +104,8 @@ export const QUA_BRAND_STORY: QuaBrandStory = {
   ],
   aiVisionTitleJa: "実用的なWebアプリ開発から、次世代のソフトウェア基盤へ",
   aiVisionTitleEn: "From Practical Web Applications to Next-Generation Software",
-  aiVisionSummaryJa: "Qua合同会社は、革命的英単語・語学単語学習アプリ『EitangoNihongo』をはじめ、目の前のユーザーが毎日便利に使えるWebアプリケーションを一つひとつ丁寧に開発・運営することを第一としています。次世代SNS『Paralmeet』（Upcoming / Developing）や各種Webツールの開発を着実に進め、確かなソフトウェア工学で事業を拡大してまいります。",
-  aiVisionSummaryEn: "At Qua LLC, our primary commitment is building and operating high-value web applications—led by our revolutionary vocabulary & language learning app EitangoNihongo, alongside our upcoming next-gen social platform Paralmeet."
+  aiVisionSummaryJa: "Qua合同会社は、現在開発中の革命的英単語・語学単語学習アプリ『EitangoNihongo』（近々公開予定）をはじめ、目の前のユーザーが毎日便利に使えるWebアプリケーションを一つひとつ丁寧に開発・運営することを第一としています。次世代SNS『Paralmeet』（Upcoming / Developing）や各種Webツールの開発を着実に進め、確かなソフトウェア工学で事業を拡大してまいります。",
+  aiVisionSummaryEn: "At Qua LLC, our primary commitment is building high-value web applications—led by our upcoming revolutionary vocabulary & language learning app EitangoNihongo (Launching Soon), alongside our upcoming next-gen social platform Paralmeet."
 };
 
 export const CORE_WEB_APPLICATIONS: WebApplicationItem[] = [
@@ -114,16 +114,17 @@ export const CORE_WEB_APPLICATIONS: WebApplicationItem[] = [
     name: "EitangoNihongo",
     nameJa: "EitangoNihongo（英単語日本語）｜革命的英単語・語学単語学習アプリ",
     category: "education_ai",
-    tagline: "Revolutionary English & Language Vocabulary Learning Application",
-    taglineJa: "文脈・語源・ニュアンスの立体理解と最適反復で語彙習得を革新する、革命的英単語・語学単語学習アプリ",
-    description: "A revolutionary English and language vocabulary learning application. Goes beyond rote memorization by mapping real-world context sentences, subtle native nuances, etymological connections, and intelligent spaced-repetition scheduling.",
-    descriptionJa: "従来の「一語一訳の丸暗記」を根本から覆す、革命的英単語・語学単語学習アプリケーションです。AIを活用した生きた文脈例文、類義語との微妙なニュアンス比較、語源ネットワーク、そして忘却曲線に基づく最適反復（SRS）を統合し、圧倒的な記憶定着と実践的な語学力を実現します。",
-    launchStatus: "Active Flagship",
-    launchStatusJa: "主力公開アプリ",
-    version: "v1.4",
+    tagline: "Revolutionary English & Language Vocabulary Learning Application (Coming Soon)",
+    taglineJa: "文脈・語源・ニュアンスの立体理解と最適反復で語彙習得を革新する、革命的英単語・語学単語学習アプリ（現在開発中・近々公開予定）",
+    description: "A revolutionary English and language vocabulary learning application currently in active development. Goes beyond rote memorization by mapping real-world context sentences, subtle native nuances, etymological connections, and intelligent spaced-repetition scheduling.",
+    descriptionJa: "従来の「一語一訳の丸暗記」を根本から覆す、現在開発中の革命的英単語・語学単語学習アプリケーションです（近々公開予定）。生きた文脈例文、類義語との微妙なニュアンス比較、語源ネットワーク、そして忘却曲線に基づく最適反復（SRS）を統合し、圧倒的な記憶定着と実践的な語学力を実現します。",
+    launchStatus: "Upcoming / Developing",
+    launchStatusJa: "現在開発中・近々公開予定",
+    version: "Developing (Coming Soon)",
     iconName: "BookOpenCheck",
-    tags: ["主力プロダクト", "革命的英単語学習", "語学単語学習アプリ", "ニュアンス＆文脈理解"],
+    tags: ["自社プロダクト", "現在開発中（近々公開）", "革命的英単語学習", "語学単語学習アプリ", "ニュアンス＆文脈理解"],
     metrics: [
+      { label: "Status", labelJa: "ステータス", value: "現在開発中・近々公開予定" },
       { label: "Category", labelJa: "ジャンル", value: "革命的英単語・語学学習" },
       { label: "Method", labelJa: "学習アプローチ", value: "文脈・ニュアンス・SRS統合" },
       { label: "Platform", labelJa: "対応環境", value: "PC / スマホWeb対応" }
@@ -134,10 +135,10 @@ export const CORE_WEB_APPLICATIONS: WebApplicationItem[] = [
       { title: "Multi-Language Vocabulary Architecture", titleJa: "英単語から多言語語彙学習への拡張設計", desc: "Engineered as a comprehensive language vocabulary mastery platform.", descJa: "英語の語彙習得を核としながら、語源・概念ネットワークを通じて幅広い語学単語学習へと応用できる設計を採用しています。" }
     ],
     techStack: ["React", "TypeScript", "IndexedDB", "Web Speech API", "Tailwind CSS"],
-    accentGradient: "from-sky-500 to-blue-600",
+    accentGradient: "from-amber-500 to-orange-600",
     hasInteractiveDemo: true,
-    isCurrentProduct: true,
-    appUrl: "https://eitangonihongo.qua.inc"
+    isCurrentProduct: false,
+    appUrl: "#"
   },
   {
     id: "paralmeet-social",
@@ -237,10 +238,10 @@ export const CORPORATE_NEWS: NewsItem[] = [
     date: "2026.06.20",
     category: "Product",
     categoryJa: "プロダクト",
-    titleJa: "革命的英単語・語学単語学習アプリ『EitangoNihongo』公開および次世代SNS『Paralmeet』開発推進のお知らせ",
-    titleEn: "Release of Revolutionary Vocabulary App 'EitangoNihongo' and Development of Next-Gen SNS 'Paralmeet'",
-    summaryJa: "文脈・ニュアンス・反復学習を統合した革命的英単語・語学単語学習アプリ『EitangoNihongo』を公開いたしました。また、次世代SNS『Paralmeet』（Upcoming / Developing）をはじめとする後続アプリケーションの開発を推進してまいります。",
-    summaryEn: "Launched EitangoNihongo, our revolutionary English and language vocabulary learning application, alongside ongoing development of our upcoming next-gen social network Paralmeet.",
+    titleJa: "革命的英単語・語学単語学習アプリ『EitangoNihongo』開発発表（近々公開予定）および次世代SNS『Paralmeet』開発推進のお知らせ",
+    titleEn: "Announcement of Revolutionary Vocabulary App 'EitangoNihongo' (Coming Soon) and Next-Gen SNS 'Paralmeet'",
+    summaryJa: "文脈・ニュアンス・反復学習を統合した革命的英単語・語学単語学習アプリ『EitangoNihongo』の開発（近々公開予定）を発表いたしました。また、次世代SNS『Paralmeet』（Upcoming / Developing）をはじめとする後続アプリケーションの開発を推進してまいります。",
+    summaryEn: "Under active development: EitangoNihongo, our upcoming revolutionary English and language vocabulary learning application (Launching Soon), alongside our next-gen social network Paralmeet.",
     readTime: "3 min",
     featured: true
   },

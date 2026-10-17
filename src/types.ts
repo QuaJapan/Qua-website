@@ -21,8 +21,8 @@ export interface WebApplicationItem {
   taglineJa: string;
   description: string;
   descriptionJa: string;
-  launchStatus: 'Active Now' | 'Live Beta' | 'Active Flagship' | 'Upcoming / Developing' | 'Upcoming 2026 Q3' | 'Upcoming 2026 Q4' | 'In Pipeline / 順次更新' | 'Research & Design';
-  launchStatusJa: '現在稼働中' | 'ライブベータ' | '主力公開アプリ' | 'Upcoming / Developing' | '2026年Q3 公開予定' | '2026年Q4 公開予定' | '順次更新・パイプライン' | '研究・設計フェーズ';
+  launchStatus: 'Active Now' | 'Live Beta' | 'Active Flagship' | 'Upcoming / Developing' | 'Upcoming 2026 Q3' | 'Upcoming 2026 Q4' | 'In Pipeline / 順次更新' | 'Research & Design' | 'Coming Soon';
+  launchStatusJa: '現在稼働中' | 'ライブベータ' | '主力公開アプリ' | 'Upcoming / Developing' | '現在開発中・近々公開予定' | '2026年Q3 公開予定' | '2026年Q4 公開予定' | '順次更新・パイプライン' | '研究・設計フェーズ';
   version: string;
   iconName: string;
   tags: string[];

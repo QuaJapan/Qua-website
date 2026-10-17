@@ -73,8 +73,8 @@ export function getClientQAReply(message: string, lang: 'ja' | 'en' = 'ja'): str
     if (lang === 'ja') {
       return `ご質問ありがとうございます。Qua合同会社の自社アプリケーションについてご案内いたします。
 
-1. **EitangoNihongo（英単語日本語）｜革命的英単語・語学単語学習アプリ（主力公開アプリ）**
-   - 従来の「一語一訳の丸暗記」を覆す、革命的英単語・語学単語学習アプリケーションです。
+1. **EitangoNihongo（英単語日本語）｜革命的英単語・語学単語学習アプリ（現在開発中・近々公開予定）**
+   - 従来の「一語一訳の丸暗記」を覆す、現在開発中の革命的英単語・語学単語学習アプリケーションです（近々公開予定）。
    - 生きた文脈例文、類義語とのニュアンス比較、語源（コアイメージ）の解説、忘却曲線に最適化された反復学習（SRS）を統合し、効率的で深い語彙習得を実現します。
 
 2. **Paralmeet（パラミート）｜次世代SNS（Upcoming / Developing）**
@@ -82,7 +82,7 @@ export function getClientQAReply(message: string, lang: 'ja' | 'en' = 'ja'): str
     } else {
       return `Thank you for asking about Qua LLC's in-house software products:
 
-1. **EitangoNihongo (English Vocabulary Learning)**: Revolutionary language vocabulary acquisition app with contextual nuance, etymological mental models, and spaced repetition.
+1. **EitangoNihongo (English Vocabulary Learning)**: Upcoming revolutionary language vocabulary acquisition app with contextual nuance, etymological mental models, and spaced repetition (Launching Soon).
 2. **Paralmeet**: Next-generation social networking platform (Upcoming / Developing).`;
     }
   }
@@ -154,7 +154,7 @@ Qua合同会社では、自社プロダクト（EitangoNihongo、Reanow、Reach 
 - **主な事業内容**：
   1. グローバル主権者教育ムーブメント『Reach Today』の運営
   2. 模擬世界MMO-SNSアプリ『Reanow』の企画・開発・IP保有
-  3. 革命的英単語・語学単語学習アプリ『EitangoNihongo』の提供
+  3. 革命的英単語・語学単語学習アプリ『EitangoNihongo』（現在開発中・近々公開予定）
   4. 次世代SNS『Paralmeet』（Upcoming / Developing）の開発
   5. ソフトウェア受託開発、ITコンサルティング
 - **公式連絡先**：qua.headquarters@gmail.com`;
@@ -164,7 +164,7 @@ Qua合同会社では、自社プロダクト（EitangoNihongo、Reanow、Reach 
 - Corporate Number: 0100-03-051369
 - Headquarters: Nihonbashi Mizuno Bldg 7F, 1-11-12 Nihonbashi-Muromachi, Chuo-ku, Tokyo, Japan
 - Representative: Soya Jimbo (Managing Partner)
-- Core Ventures: Reach Today, Reanow, EitangoNihongo, Paralmeet, and Custom Software Development.`;
+- Core Ventures: Reach Today, Reanow, EitangoNihongo (Coming Soon), Paralmeet, and Custom Software Development.`;
     }
   }
 
@@ -172,10 +172,10 @@ Qua合同会社では、自社プロダクト（EitangoNihongo、Reanow、Reach 
     return `ご質問ありがとうございます。Qua合同会社（Qua LLC）公式 Q&A ボットです。
 
 「${message}」についてご案内いたします。
-当社は、親会社・バックエンド運営法人として**『Reach Today（世界主権者教育ムーブメント）』**、**『Reanow（模擬世界MMO-SNS）』**、**『EitangoNihongo（革命的英単語アプリ）』**、**『Paralmeet（次世代SNS）』**の自社開発・運営、および**受託ソフトウェア開発**を行うテクノロジー企業です（法人番号：0100-03-051369、代表社員：神保 想叶）。
+当社は、親会社・バックエンド運営法人として**『Reach Today（世界主権者教育ムーブメント）』**、**『Reanow（模擬世界MMO-SNS）』**、**『EitangoNihongo（英単語学習アプリ / 開発中・近々公開）』**、**『Paralmeet（次世代SNS）』**の自社開発・運営、および**受託ソフトウェア開発**を行うテクノロジー企業です（法人番号：0100-03-051369、代表社員：神保 想叶）。
 
 画面上部のブランド切り替えタブから各公式LPをご覧いただけるほか、具体的なご相談やお見積りは「お問い合わせ」ボタンよりいつでもお気軽にお寄せください。`;
   } else {
-    return `Thank you for contacting Qua LLC. We are a Tokyo-based technology and software development holding company managing Reach Today, Reanow, EitangoNihongo, and Paralmeet. Please feel free to reach out to qua.headquarters@gmail.com for inquiries.`;
+    return `Thank you for contacting Qua LLC. We are a Tokyo-based technology and software development holding company managing Reach Today, Reanow, EitangoNihongo (Coming Soon), and Paralmeet. Please feel free to reach out to qua.headquarters@gmail.com for inquiries.`;
   }
 }

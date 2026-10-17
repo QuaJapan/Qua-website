@@ -13,7 +13,8 @@ import {
   Server, 
   ShieldCheck, 
   MessageSquare,
-  Sparkles
+  Sparkles,
+  Bell
 } from 'lucide-react';
 
 interface WebApplicationsPipelineProps {
@@ -113,30 +114,30 @@ export const WebApplicationsPipeline: React.FC<WebApplicationsPipelineProps> = (
           </h2>
           <p className="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed font-sans">
             {lang === 'ja'
-              ? '従来の暗記型学習を覆す革命的英単語・語学単語学習アプリ『EitangoNihongo』をはじめ、現在開発中の次世代SNS『Paralmeet』（Upcoming / Developing）、および法人向けアプリケーション受託開発を展開しています。'
-              : 'Led by EitangoNihongo, our revolutionary English and language vocabulary learning app, alongside our upcoming next-gen social network Paralmeet (Upcoming / Developing) and custom software engineering.'}
+              ? '従来の暗記型学習を覆す革命的英単語・語学単語学習アプリ『EitangoNihongo』（現在開発中・近々公開予定）をはじめ、次世代SNS『Paralmeet』（Upcoming / Developing）、および法人向けアプリケーション受託開発を展開しています。'
+              : 'Led by our upcoming revolutionary vocabulary app EitangoNihongo (In Development / Launching Soon), alongside our next-gen social network Paralmeet (Upcoming / Developing) and custom software engineering.'}
           </p>
         </div>
 
         {/* ========================================================================= */}
-        {/* 1. FLAGSHIP APPLICATION: EitangoNihongo (革命的英単語・語学単語学習アプリ) */}
+        {/* 1. IN-DEVELOPMENT FLAGSHIP: EitangoNihongo (現在開発中・近々公開予定) */}
         {/* ========================================================================= */}
         <div className="mb-20">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 mb-8 border-b border-slate-800">
             <div>
               <h3 className="text-lg sm:text-xl font-display font-bold text-white">
                 {lang === 'ja'
-                  ? '01. 主力アプリケーション：EitangoNihongo（革命的英単語・語学単語学習アプリ）'
-                  : '01. Flagship Application: EitangoNihongo (Revolutionary Vocabulary Learning App)'}
+                  ? '01. 開発中アプリケーション：EitangoNihongo（英単語・語学単語学習アプリ / 近々公開予定）'
+                  : '01. In-Development Flagship: EitangoNihongo (Vocabulary Learning App / Coming Soon)'}
               </h3>
               <p className="text-xs text-slate-400 mt-1">
                 {lang === 'ja'
-                  ? '「一語一訳の丸暗記」から「文脈・語源・ニュアンスの立体理解」へ。語学単語学習の常識を覆す主力Webアプリケーション。'
-                  : 'Transforming language vocabulary acquisition through deep nuance mapping, etymology, and adaptive spaced repetition.'}
+                  ? '「一語一訳の丸暗記」から「文脈・語源・ニュアンスの立体理解」へ。語学単語学習の常識を覆す自社Webアプリケーション（現在開発中・近々公開予定）。'
+                  : 'Transforming language vocabulary acquisition through deep nuance mapping, etymology, and adaptive spaced repetition (In Active Development / Launching Soon).'}
               </p>
             </div>
-            <span className="text-xs text-emerald-400 font-medium">
-              {lang === 'ja' ? '● 公開中・インタラクティブ体験可能' : '● Active Flagship Product'}
+            <span className="text-xs text-amber-400 font-medium">
+              {lang === 'ja' ? '● 現在開発中・近々公開予定（Coming Soon）' : '● In Development (Launching Soon)'}
             </span>
           </div>
 
@@ -147,29 +148,32 @@ export const WebApplicationsPipeline: React.FC<WebApplicationsPipelineProps> = (
               <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 rounded-xl bg-sky-950/80 text-sky-400 border border-sky-800/60">
+                    <div className="p-3 rounded-xl bg-amber-950/80 text-amber-400 border border-amber-800/60">
                       <BookOpenCheck className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="text-xs font-mono-tech text-sky-400">
-                        REVOLUTIONARY LANGUAGE &amp; VOCABULARY APP
+                      <div className="text-xs font-mono-tech text-amber-400">
+                        IN ACTIVE DEVELOPMENT · LAUNCHING SOON
                       </div>
-                      <h4 className="text-2xl sm:text-3xl font-display font-bold text-white">
-                        EitangoNihongo
+                      <h4 className="text-2xl sm:text-3xl font-display font-bold text-white flex items-center gap-2.5">
+                        <span>EitangoNihongo</span>
+                        <span className="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30 font-sans font-medium">
+                          {lang === 'ja' ? '開発中・近々公開' : 'Coming Soon'}
+                        </span>
                       </h4>
                     </div>
                   </div>
 
                   <p className="text-sm sm:text-base font-semibold text-sky-300 mb-3">
                     {lang === 'ja'
-                      ? '語彙習得の効率と理解深度を根本から変える、革命的英単語・語学単語学習アプリ'
-                      : 'Revolutionary English & Language Vocabulary Learning Application'}
+                      ? '語彙習得の効率と理解深度を根本から変える、革命的英単語・語学単語学習アプリ（現在開発中・近々公開予定）'
+                      : 'Revolutionary English & Language Vocabulary Learning Application (Coming Soon)'}
                   </p>
 
                   <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
                     {lang === 'ja'
-                      ? '『EitangoNihongo（英単語日本語）』は、単語リストを機械的に丸暗記する従来の学習法を刷新するために開発された、次世代の英単語・語学単語学習アプリケーションです。実際の文脈に即した生きた例文、類義語との繊細なニュアンスの違い、語源（コアイメージ）の解説、そして脳科学・忘却曲線に基づく反復アルゴリズム（SRS）を一つに統合しています。'
-                      : 'EitangoNihongo is engineered to replace mechanical rote memorization with deep conceptual mastery. It integrates living context sentences, native nuance comparisons, etymological core imagery, and adaptive spaced-repetition scheduling in a fast, intuitive web interface.'}
+                      ? '『EitangoNihongo（英単語日本語）』は、単語リストを機械的に丸暗記する従来の学習法を刷新するために現在開発を進めている、次世代の英単語・語学単語学習アプリケーションです（近々公開予定）。実際の文脈に即した生きた例文、類義語との繊細なニュアンスの違い、語源（コアイメージ）の解説、そして脳科学・忘却曲線に基づく反復アルゴリズム（SRS）を一つに統合しています。'
+                      : 'EitangoNihongo is currently in active development to replace mechanical rote memorization with deep conceptual mastery. It integrates living context sentences, native nuance comparisons, etymological core imagery, and adaptive spaced-repetition scheduling in a fast, intuitive web interface.'}
                   </p>
 
                   {/* 3 Revolutionary Points */}
@@ -221,14 +225,14 @@ export const WebApplicationsPipeline: React.FC<WebApplicationsPipelineProps> = (
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <button
-                    onClick={() => onOpenNotifyModal('EitangoNihongo（革命的英単語・語学単語学習アプリ）')}
-                    className="flex-1 py-3 px-5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap shadow-md"
+                    onClick={() => onOpenNotifyModal('EitangoNihongo（英単語・語学単語学習アプリ / 近々公開予定）')}
+                    className="flex-1 py-3 px-5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap shadow-md"
                   >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>{lang === 'ja' ? 'EitangoNihongo の利用・詳細お問い合わせ' : 'Launch / Inquire About EitangoNihongo'}</span>
+                    <Bell className="w-4 h-4" />
+                    <span>{lang === 'ja' ? 'EitangoNihongo 公開通知・事前登録' : 'Notify Me Upon EitangoNihongo Launch'}</span>
                   </button>
                   <button
-                    onClick={() => onAskCopilotAboutApp('EitangoNihongo', '革命的英単語・語学単語学習アプリ「EitangoNihongo」の特徴や学習メソッドについて詳しく教えてください。')}
+                    onClick={() => onAskCopilotAboutApp('EitangoNihongo', '現在開発中の英単語・語学単語学習アプリ「EitangoNihongo」の特徴や公開予定について詳しく教えてください。')}
                     className="py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs border border-slate-700 transition-colors flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap"
                   >
                     <MessageSquare className="w-3.5 h-3.5 text-sky-400" />
@@ -243,7 +247,7 @@ export const WebApplicationsPipeline: React.FC<WebApplicationsPipelineProps> = (
                   <div className="flex items-center justify-between text-xs text-slate-400 mb-4">
                     <span className="font-semibold text-sky-400 flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
-                      <span>{lang === 'ja' ? 'EitangoNihongo インタラクティブ学習カード体験' : 'EitangoNihongo Interactive Card Demo'}</span>
+                      <span>{lang === 'ja' ? 'EitangoNihongo 先行プレビュー体験（開発中）' : 'EitangoNihongo Interactive Card Preview (Under Development)'}</span>
                     </span>
                     <span className="font-mono-tech tabular-nums text-slate-400">
                       Word {currentWordIndex + 1} / {sampleWords.length}

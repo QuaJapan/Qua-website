@@ -14,6 +14,7 @@ import {
   Orbit, 
   Building2 
 } from 'lucide-react';
+import { getClientQAReply } from '../utils/knowledgeBot';
 
 interface DeepThinkingCopilotProps {
   lang: Language;
@@ -143,17 +144,16 @@ Click one of the common questions below or type your question directly.`,
 
       setMessages(prev => [...prev, assistantMsg]);
     } catch (error: any) {
-      console.error('Error fetching Q&A response:', error);
-      const errorMsg: ChatMessage = {
-        id: `err-${Date.now()}`,
+      console.warn('API route not available, using client-side knowledge bot:', error);
+      const fallbackReply = getClientQAReply(textToSend, lang);
+      const assistantMsg: ChatMessage = {
+        id: `assistant-fallback-${Date.now()}`,
         sender: 'assistant',
-        content: lang === 'ja'
-          ? `ただいま応答サーバーへの接続が混み合っております。お急ぎのご用件は公式メール（qua.headquarters@gmail.com）またはお問い合わせフォームよりご連絡ください。`
-          : `Unable to reach the Q&A server right now. For urgent inquiries, please contact qua.headquarters@gmail.com.`,
+        content: fallbackReply,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        modelUsed: 'Qua Q&A Bot'
+        modelUsed: 'Qua Q&A Bot (Official Knowledge Base)'
       };
-      setMessages(prev => [...prev, errorMsg]);
+      setMessages(prev => [...prev, assistantMsg]);
     } finally {
       setLoading(false);
     }
